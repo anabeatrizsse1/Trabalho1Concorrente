@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="753.0" style="-fx-background-color: #228B22;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TelaController">
+   <children>
+      <ChoiceBox fx:id="opcao" layoutX="293.0" layoutY="88.0" prefHeight="7.0" prefWidth="182.0" />
+      <Label alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="42.0" prefWidth="753.0" style="-fx-border-color: #006400;" text="Sistema De Faturamento" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="16.0" layoutY="156.0" prefHeight="26.0" prefWidth="133.0" style="-fx-alignment: ;" text="VALOR DA COMPRA" textFill="WHITE">
+         <font>
+            <Font name="System Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="211.0" prefHeight="26.0" prefWidth="134.0" text="GASTOS" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="265.0" prefHeight="26.0" prefWidth="134.0" text="VALOR DA VENDA" textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="valorInicial" layoutX="159.0" layoutY="157.0" prefHeight="18.0" prefWidth="470.0" />
+      <TextField fx:id="valorGastos" layoutX="159.0" layoutY="211.0" prefHeight="26.0" prefWidth="470.0" />
+      <TextField fx:id="valorFinal" layoutX="159.0" layoutY="264.0" prefHeight="26.0" prefWidth="470.0" />
+      <Button layoutX="340.0" layoutY="392.0" mnemonicParsing="false" onAction="#botaoEnter" prefHeight="26.0" prefWidth="62.0" text="Enter" />
+      <Label fx:id="mensagemResultado" layoutX="157.0" layoutY="467.0" prefHeight="26.0" text="Seu Faturamento" textFill="WHITE">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mensagemFeedback" layoutX="159.0" layoutY="505.0" prefHeight="26.0" text="Feedback" textFill="WHITE">
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="120.0" fitWidth="115.0" layoutX="8.0" layoutY="437.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon-faturamento.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="99.0" fitWidth="98.0" layoutX="655.0" layoutY="39.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon-dinheiro.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="294.0" layoutY="69.0" prefHeight="18.0" prefWidth="182.0" text="O QUE DESEJA NEGOCIAR?" textFill="WHITE" />
+      <Label layoutX="244.0" layoutY="315.0" prefHeight="26.0" prefWidth="462.0" text="QUANTO QUER LUCRAR NESSA VENDA?" textFill="WHITE" />
+      <RadioButton fx:id="botao10" layoutX="114.0" layoutY="358.0" mnemonicParsing="false" selected="true" text="10%" textFill="#f7f7f7">
+         <toggleGroup>
+            <ToggleGroup fx:id="grupo" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="botao20" layoutX="223.0" layoutY="358.0" mnemonicParsing="false" text="20%" textFill="WHITE" toggleGroup="$grupo" />
+      <RadioButton fx:id="botao30" layoutX="333.0" layoutY="358.0" mnemonicParsing="false" text="30%" textFill="WHITE" toggleGroup="$grupo" />
+      <RadioButton fx:id="botao40" layoutX="445.0" layoutY="358.0" mnemonicParsing="false" text="40%" textFill="#fffefe" toggleGroup="$grupo" />
+      <RadioButton fx:id="botao50" layoutX="562.0" layoutY="358.0" mnemonicParsing="false" text="50%" textFill="#fffbfb" toggleGroup="$grupo" />
+   </children>
+</AnchorPane>
